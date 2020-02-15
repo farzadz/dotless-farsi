@@ -2,8 +2,9 @@ from telegram.ext import Updater
 from telegram.ext import CommandHandler
 from dotless import translate
 from telegram.ext import MessageHandler, Filters
+import os
 
-updater = Updater(token='', use_context=True)
+updater = Updater(token=os.getenv("BOT_TOKEN"), use_context=True)
 dispatcher = updater.dispatcher
 
 
