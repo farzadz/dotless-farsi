@@ -11,8 +11,8 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
                      level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-dynamodb = boto3.resource('dynamodb', region_name='us-west-2', aws_access_key_id=os.getenv('ACCESS_KEY') or 'some_key', aws_secret_access_key=os.getenv('SECRET_KEY') or 'some_secret')
-dynamoClient = boto3.client('dynamodb', region_name='us-west-2', aws_access_key_id=os.getenv('ACCESS_KEY') or 'some_key', aws_secret_access_key=os.getenv('SECRET_KEY') or 'some_secret')
+dynamodb = boto3.resource('dynamodb', region_name='us-east-2', aws_access_key_id=os.getenv('ACCESS_KEY') or 'some_key', aws_secret_access_key=os.getenv('SECRET_KEY') or 'some_secret')
+dynamoClient = boto3.client('dynamodb', region_name='us-east-2', aws_access_key_id=os.getenv('ACCESS_KEY') or 'some_key', aws_secret_access_key=os.getenv('SECRET_KEY') or 'some_secret')
 
 
 class Message:
